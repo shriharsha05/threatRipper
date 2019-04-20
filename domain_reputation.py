@@ -5,9 +5,11 @@ except ImportError:
     from urllib2 import urlopen
 
 import json
+import pprint
 
 def print_response(txt):
     response_json = json.loads(txt)
+    pprint.pprint(response_json)
     print('Reputation score: ' + str(response_json['reputationScore']))
 
 api_key = 'at_FdlCgOLdAmhuP67o2x88QaE4mqLvc'

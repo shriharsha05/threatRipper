@@ -4,12 +4,14 @@ except ImportError:
   from urllib import pathname2url
   from urllib2 import urlopen
 
+import pprint
 import json
 
 api_key = 'at_FdlCgOLdAmhuP67o2x88QaE4mqLvc'
 
 def print_response(txt):
   response_json = json.loads(txt)
+  pprint.pprint(response_json)
   print('Chain length: ' + str(len(response_json)))
 
 def domain_infrastructure_analysis(domain):

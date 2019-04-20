@@ -1,0 +1,1 @@
+https://api.threatintelligenceplatform.com/v1/reputation?domainName=threatintelligenceplatform.com&mode=fast&apiKey=at_FdlCgOLdAmhuP67o2x88QaE4mqLvc

@@ -1,3 +1,8 @@
+'''
+      __author__ = "Shriharsha M"
+      __email__ = "shriharsha05@gmail.com"
+'''
+
 import pyfiglet
 from colorama import Fore, Back, Style
 import time
@@ -10,6 +15,7 @@ from domain_reputation import domain_reputation
 from connected_domains import connected_domains
 
 def main_banner():
+      """ prints main menu, based on user choice calls respective banner menu """
       os.system("clear")
       print(Fore.GREEN+ Back.BLACK+ pyfiglet.figlet_format("threat", font="roman"))
       print(Fore.GREEN + pyfiglet.figlet_format("Ripper", font="roman"))
@@ -44,6 +50,7 @@ def main_banner():
             main_banner()
 
 def analysis_banner():
+      """ Domain Infrastructure Analysis Banner """
       os.system("clear")
       print(Fore.GREEN+ Back.BLACK + pyfiglet.figlet_format("Domain Analysis", font="banner"))
       print(Style.RESET_ALL)
@@ -64,6 +71,7 @@ def analysis_banner():
             main_banner()
 
 def ssl_certificates_banner():
+      """ SSL Certificates Chain Banner """
       os.system("clear")
       print(Fore.GREEN+ Back.BLACK + pyfiglet.figlet_format("SSL Certificates Chain", font="banner"))
       print(Style.RESET_ALL)
@@ -85,6 +93,7 @@ def ssl_certificates_banner():
             main_banner()
 
 def ssl_configuration_banner():
+      """ SSL Configuration Analysis Banner """
       os.system("clear")
       print(Fore.GREEN+ Back.BLACK + pyfiglet.figlet_format("SSL Configuration Analysis", font="banner"))
       print(Style.RESET_ALL)
@@ -106,6 +115,7 @@ def ssl_configuration_banner():
             main_banner()
 
 def domain_malware_banner():
+      """ Domain Malware Check Banner """
       os.system("clear")
       print(Fore.GREEN+ Back.BLACK + pyfiglet.figlet_format("Domain Malware Check", font="banner"))
       print(Style.RESET_ALL)
@@ -127,6 +137,7 @@ def domain_malware_banner():
             main_banner()
 
 def domain_reputation_banner():
+      """ Domain Reputation Banner """
       os.system("clear")
       print(Fore.GREEN+ Back.BLACK + pyfiglet.figlet_format("Domain Reputation", font="banner"))
       print(Style.RESET_ALL)
@@ -148,6 +159,7 @@ def domain_reputation_banner():
             main_banner()
 
 def connected_domains_banner():
+      """ Connected Domains Banner """
       os.system("clear")
       print(Fore.GREEN+ Back.BLACK + pyfiglet.figlet_format("Connected Domains", font="banner"))
       print(Style.RESET_ALL)

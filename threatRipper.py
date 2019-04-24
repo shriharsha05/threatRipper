@@ -27,6 +27,7 @@ def main_banner():
       print("   {5} -- Connected Domains")
       print("   {6} -- Domain Reputation")  
       print("   {7} -- Whois Check")
+      print("   {0} -- Update")
       print("   {99} -- Exit\n")
       print(Fore.RED)
       key = input("threatRipper~# ")
@@ -99,7 +100,7 @@ def ssl_certificates_banner():
 def ssl_configuration_banner():
       """ SSL Configuration Analysis Banner """
       os.system("clear")
-      print(Fore.GREEN+ Back.BLACK + pyfiglet.figlet_format("SSL Configuration Analysis", font="banner"))
+      print(Fore.GREEN+ Back.BLACK + pyfiglet.figlet_format("SSL Config Analysis", font="banner"))
       print(Style.RESET_ALL)
       print("Enter domain name :")
       print(Fore.RED)

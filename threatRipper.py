@@ -26,6 +26,7 @@ def main_banner():
       print("   {4} -- Domain Malware Check")
       print("   {5} -- Connected Domains")
       print("   {6} -- Domain Reputation")  
+      print("   {7} -- Whois Check")
       print("   {99} -- Exit\n")
       print(Fore.RED)
       key = input("threatRipper~# ")
@@ -42,7 +43,10 @@ def main_banner():
             connected_domains_banner()
       elif key == "6":
             domain_reputation_banner()
+      elif key == "7":
+            whois_check_banner()
       elif key == "99":
+            os.system("rm -rf __pycache__")
             print("Bye Bye :)")
       else:
             print("Please choose wisely!")
@@ -177,6 +181,29 @@ def connected_domains_banner():
       print(Style.RESET_ALL)
       if option == "1":
             connected_domains_banner()
+      else:
+            main_banner()
+
+def whois_check_banner():
+      """ Connected Domains Banner """
+      os.system("clear")
+      print(Fore.GREEN + Back.BLACK +
+            pyfiglet.figlet_format("Whois check", font="banner"))
+      print(Style.RESET_ALL)
+      print("Enter domain name :")
+      print(Fore.RED)
+      ip = input("threatRipper~# ")
+      print(Style.RESET_ALL)
+      os.system("whois "+ip)
+      print("\n")
+      print(Fore.YELLOW)
+      print("   {1} -- Do Another Whois Check")
+      print("   {Any Other Key} -- Goto Main Menu")
+      print(Fore.RED)
+      option = input("threatRipper~# ")
+      print(Style.RESET_ALL)
+      if option == "1":
+            whois_check_banner()
       else:
             main_banner()
 

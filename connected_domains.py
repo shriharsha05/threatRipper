@@ -6,14 +6,24 @@ except ImportError:
   from urllib2 import urlopen
 
 import json
-import pprint
+#import pprint
+from pygments import highlight
+from pygments.lexers.data import JsonLexer
+from pygments.formatters.terminal import TerminalFormatter
 
 api_key = 'at_FdlCgOLdAmhuP67o2x88QaE4mqLvc'
 
 def print_response(txt):
   response_json = txt.json()
-  subdomains = response_json['domain_siblings']
-  pprint.pprint(subdomains)
+  #subdomains = response_json['domain_siblings']
+  subdomains = {
+      'domain_siblings': response_json['domain_siblings']}
+  # print(type(subdomains))
+  # print(type(response_json))
+  # print(type(json.dumps(subdomains, indent=4)))
+  colorful_json = highlight(json.dumps(subdomains, indent=4),
+                            JsonLexer(), TerminalFormatter())
+  print(colorful_json)
   #print('Chain length: ' + str(len(response_json)))
 
 def connected_domains(domain):

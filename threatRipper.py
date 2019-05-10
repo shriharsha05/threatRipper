@@ -4,6 +4,7 @@
 '''
 
 import pyfiglet
+import pprint
 from colorama import Fore, Back, Style
 import time
 import os
@@ -20,12 +21,12 @@ def main_banner():
       print(Fore.GREEN+ Back.BLACK+ pyfiglet.figlet_format("threat", font="roman"))
       print(Fore.GREEN + pyfiglet.figlet_format("Ripper", font="roman"))
       print(Style.RESET_ALL + Fore.YELLOW)
-      print("   {1} -- Domain Infrastructure Analysis")
-      print("   {2} -- SSL Certificates Chain")
-      print("   {3} -- SSL Configuration Analysis") 
-      print("   {4} -- Domain Malware Check")
-      print("   {5} -- Connected Domains")
-      print("   {6} -- Domain Reputation")  
+      print("   {1} -- Domain Malware Check")
+      print("   {2} -- Domain Infrastructure Analysis")
+      print("   {3} -- Connected Domains")
+      print("   {4} -- SSL Certificates Chain")
+      print("   {5} -- Domain Reputation")
+      print("   {6} -- SSL Configuration Analysis") 
       print("   {7} -- Whois Check")
       print("   {0} -- Update")
       print("   {99} -- Exit\n")
@@ -33,25 +34,28 @@ def main_banner():
       key = input("threatRipper~# ")
       print(Style.RESET_ALL)
       if key == "1":
-            analysis_banner()
+            domain_malware_banner()    
       elif key == "2":
-            ssl_certificates_banner()
+            analysis_banner()       
       elif key == "3":
-            ssl_configuration_banner()
+            connected_domains_banner()     
       elif key == "4":
-            domain_malware_banner()
+            ssl_certificates_banner()
       elif key == "5":
-            connected_domains_banner()
-      elif key == "6":
             domain_reputation_banner()
+      elif key == "6":
+            ssl_configuration_banner()
       elif key == "7":
             whois_check_banner()
+      elif key == "0":
+            print("Visit source to update : https://github.com/shriharsha05/threatRipper")
+            main_banner()
       elif key == "99":
             os.system("rm -rf __pycache__")
-            print("Bye Bye :)")
+            print("Bye Bye ;_;")
       else:
             print("Please choose wisely!")
-            time.sleep(5)
+            time.sleep(2)
             main_banner()
 
 def analysis_banner():
@@ -195,7 +199,7 @@ def whois_check_banner():
       print(Fore.RED)
       ip = input("threatRipper~# ")
       print(Style.RESET_ALL)
-      os.system("whois "+ip)
+      pprint.pprint(os.system("whois "+ip))
       print("\n")
       print(Fore.YELLOW)
       print("   {1} -- Do Another Whois Check")

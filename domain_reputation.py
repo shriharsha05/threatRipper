@@ -18,7 +18,7 @@ def print_response(txt):
     print('Reputation score: ' + str(response_json['reputationScore']))
 
 api_key = 'at_FdlCgOLdAmhuP67o2x88QaE4mqLvc'
-mode = 'fast'
+mode = 'full'
 
 def domain_reputation(domain):
   url = 'https://api.threatintelligenceplatform.com/v1/reputation'\

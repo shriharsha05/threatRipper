@@ -48,7 +48,8 @@ def main_banner():
       elif key == "7":
             whois_check_banner()
       elif key == "0":
-            print("Visit source to update : https://github.com/shriharsha05/threatRipper")
+            print("For now visit source to update : https://github.com/shriharsha05/threatRipper")
+            time.sleep(4)
             main_banner()
       elif key == "99":
             os.system("rm -rf __pycache__")

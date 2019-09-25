@@ -24,9 +24,17 @@ threatRipper is a command-line tool for 'web threat intelligence' built using py
 threatRipper requires [Python 3](https://www.python.org/download/releases/3.0/)+ to run.
 
 ```sh
+Using Virtual Environment
 $ git clone github.com/shriharsha05/threatRipper.git
 $ cd threatRipper/
 $ sh install.sh
+
+or
+
+Using Docker
+$ git clone github.com/shriharsha05/threatRipper.git
+$ sudo docker build -t "threatRipper" ./threatRipper
+$ sudo docker run threatRipper
 ```
 
 ### Use cases 

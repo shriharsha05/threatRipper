@@ -1,6 +1,8 @@
 # threatRipper v1.0
 *May 12, 2019*
 
+![](https://drive.google.com/uc?id=1ZkT6zUXFLMHQjM7kV6-dOi4zIj8eTbLC)
+<br>
 threatRipper is a command-line tool for 'web threat intelligence' built using python and powered by 'Virus Total' and 'Threat Intelligence Platform' API's.
 
 # Features
@@ -13,7 +15,7 @@ threatRipper is a command-line tool for 'web threat intelligence' built using py
   
   - **SSL Certificates Chain**: For a given domain name, get detailed information about its SSL Certificate and the complete SSL Certificates chain. The data is provided in a unified and consistent JSON format and could be easily integrated with your system.
   
-  - **Domain Reputation Details**: For a given domain name or IPv4 address, collect and evaluate over 120 parameters and calculate the resulting reputation score based on
+  - **Domain Reputation Details**: For a given domain name or IPv4 address, collect and evaluate over 120 parameters and calculate the resulting reputation score.
   
   - **SSL Configuration Analysis**: For a given domain name, establish and test SSL connection to the host and analyze how it is configured - to detect common configuration issues potentially leading to vulnerabilities.
   

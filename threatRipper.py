@@ -213,4 +213,5 @@ def whois_check_banner():
       else:
             main_banner()
 
-main_banner()
+if __name__ == "__main__":
+      main_banner()

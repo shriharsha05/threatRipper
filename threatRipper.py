@@ -14,6 +14,17 @@ from ssl_configuration_analysis import ssl_configuration_analysis
 from domain_malware_check import domain_malware_check
 from domain_reputation import domain_reputation
 from connected_domains import connected_domains
+import socket
+
+
+def is_connected():
+    try:
+        # connect to the host
+        socket.create_connection(("www.google.com", 80))
+        return True
+    except OSError:
+        pass
+    return False
 
 def main_banner():
       """ prints main menu, based on user choice calls respective banner menu """
@@ -31,6 +42,13 @@ def main_banner():
       print("   {0} -- Update")
       print("   {99} -- Exit\n")
       print(Fore.RED)
+      #check for internet connection
+      if is_connected():
+            pass
+      else:
+            print("Please connect to internet first!")
+            time.sleep(4)
+            main_banner()
       key = input("threatRipper~# ")
       print(Style.RESET_ALL)
       if key == "1":
@@ -48,8 +66,11 @@ def main_banner():
       elif key == "7":
             whois_check_banner()
       elif key == "0":
-            print("For now visit source to update : https://github.com/shriharsha05/threatRipper")
-            time.sleep(4)
+            try:
+                  os.system("git pull origin master")
+            except:
+                  print("You dont have git installed!\nvisit source to update : https://github.com/shriharsha05/threatRipper")
+            time.sleep(3)
             main_banner()
       elif key == "99":
             os.system("rm -rf __pycache__")

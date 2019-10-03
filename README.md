@@ -35,8 +35,8 @@ or
 
 Using Docker Image
 $ git clone github.com/shriharsha05/threatRipper.git
-$ sudo docker build -t "threatRipper" ./threatRipper
-$ sudo docker run threatRipper
+$ sudo docker build -t "app" ./threatRipper
+$ sudo docker run -i app
 ```
 
 ### Use cases 
